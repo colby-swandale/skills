@@ -1,0 +1,17 @@
+{
+  "name": "colby-skills",
+  "owner": {
+    "name": "Colby Swandale",
+    "email": "colby@rubygems.org"
+  },
+  "plugins": [
+    {
+      "name": "setup-environment",
+      "source": "./setup-environment",
+      "description": "Repeatable macOS dev environment setup (Homebrew packages + ~/.config dotfiles).",
+      "version": "1.0.0",
+      "author": { "name": "Colby Swandale" },
+      "keywords": ["macos", "dotfiles", "setup"]
+    }
+  ]
+}

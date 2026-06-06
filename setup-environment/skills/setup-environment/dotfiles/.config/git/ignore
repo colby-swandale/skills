@@ -1,0 +1,16 @@
+.byebug_history
+.opencode
+.claude
+.DS_Store
+*.log
+cache
+build
+dist
+logs
+node_modules
+images
+.bundle
+.devcontainer
+.claude/settings.local.json
+.claude/CLAUDE.local.md
+.agents/skills/dd-*

@@ -1,0 +1,21 @@
+{
+  "name": "setup-environment",
+  "displayName": "macOS Dev Environment Setup",
+  "version": "1.0.0",
+  "description": "Repeatable setup for Colby's macOS (Apple Silicon) dev environment — Homebrew packages and ~/.config dotfiles, applied without symlinks or external tooling.",
+  "author": {
+    "name": "Colby Swandale",
+    "email": "colby@rubygems.org"
+  },
+  "repository": "https://github.com/colby-swandale/skills",
+  "license": "MIT",
+  "keywords": [
+    "macos",
+    "dotfiles",
+    "setup",
+    "homebrew",
+    "fish",
+    "mise",
+    "neovim"
+  ]
+}

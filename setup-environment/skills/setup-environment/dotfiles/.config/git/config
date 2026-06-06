@@ -1,0 +1,54 @@
+[credential]
+  helper = osxkeychain
+
+[alias]
+  s = status
+  d = diff
+  co = checkout
+  last = log -1 HEAD
+  nuke = reset --hard HEAD
+  wt = worktree list
+  wta = worktree add
+  wtr = worktree remove
+
+[init]
+  defaultBranch = main
+
+[push]
+  autoSetupRemote = true
+
+[pull]
+  rebase = true
+
+[fetch]
+  prune = true
+
+[rebase]
+  autoStash = true
+
+[rerere]
+  enabled = true
+
+[merge]
+  conflictstyle = zdiff3
+
+[column]
+  ui = auto
+
+[branch]
+  sort = -committerdate
+
+[diff]
+  algorithm = histogram
+  colorMoved = default
+
+[user]
+  email = colby@rubygems.org
+  name = Colby Swandale
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
