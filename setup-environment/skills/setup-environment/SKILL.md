@@ -23,6 +23,16 @@ Self-contained setup for Colby's macOS (Apple Silicon) dev environment — tools
 
 ## Fresh-Machine Setup
 
+**Before running anything, ask about extra packages.** This list pins the core toolset, but a
+given machine often wants a few personal GUI apps or tools on top (Zoom, Granola, Rectangle…).
+Ask the user up front — *"Any extra Homebrew packages to install on this machine? CLI formulae vs.
+GUI casks — I'll fold them into the install."* — and sort what they name into formulae and casks
+(check `brew info <name>` if unsure which a package is). Fold the extras into step 3's `brew install`
+lines so they install alongside everything else and **any install errors surface during this run**
+rather than after the user thinks setup is done. After the install succeeds, offer to append the
+extras to step 3's source-of-truth list (see *Modify Workflow*) so they persist across rebuilds —
+don't edit the list silently; let the user decide which extras are machine-specific vs. permanent.
+
 Run these once, in order, **in bash or zsh** (not fish — these use POSIX/bash syntax):
 
 ```sh
@@ -39,6 +49,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # 3. Packages — this list is the source of truth. Add/remove a name and re-run to sync.
 #    No auto-prune: removing a name here does NOT uninstall it (do that by hand).
+#    Append any extra packages the user named (see "ask about extra packages" above) to the
+#    matching line below — formulae here, casks on the --cask line — so errors surface now.
 #    CLI: fish=shell  mise=node/ruby versions  gh=GitHub CLI + git creds  zoxide=smarter cd
 #         ripgrep=rg  btop=monitor  mole, lazygit, neovim, jq, awscli
 brew install fish mise btop awscli zoxide gh lazygit neovim ripgrep jq mole
