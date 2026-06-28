@@ -1,0 +1,12 @@
+interface:
+  display_name: "Organising Slack"
+  short_description: "Clean up Slack channel focus"
+  default_prompt: "Use $organising-slack to review my active Slack channels, interview me first, and propose a cleaner sidebar plan."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "slack"
+      description: "Slack connector for reading channel membership and recent activity, plus applying approved changes when supported."
+    - type: "mcp"
+      value: "chrome"
+      description: "Chrome/browser automation for applying approved Slack sidebar organisation in the web UI."

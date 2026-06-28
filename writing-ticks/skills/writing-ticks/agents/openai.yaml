@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Ticks"
+  short_description: "Edit drafts to sound human"
+  default_prompt: "Use $writing-ticks to review this draft for AI-writing tells and give me a cleaner ready-to-send version."
