@@ -12,6 +12,9 @@ set -gx ENABLE_LSP_TOOL 1
 set -gx EDITOR vim
 set -gx VISUAL vim
 
+# zoxide: smarter cd — `z <fuzzy name>` jumps to frecent dirs
+zoxide init fish | source
+
 # Abbreviations
 abbr -a rm trash
 abbr -a gs 'git status'
