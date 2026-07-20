@@ -54,9 +54,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 #    CLI: fish=shell  mise=node/ruby versions  gh=GitHub CLI + git creds  zoxide=smarter cd
 #         ripgrep=rg  btop=monitor  mole, lazygit, neovim, jq, awscli
 brew install fish mise btop awscli zoxide gh lazygit neovim ripgrep jq mole
-#    Casks: ghostty=terminal (launches fish), 2 nerd fonts, plus the GUI apps
+#    Casks: ghostty=terminal (launches fish), 2 nerd fonts, plus the GUI apps.
+#    copilot-cli=GitHub Copilot CLI (`copilot` binary)  antigravity=Google's agentic IDE
 brew install --cask font-cascadia-code font-caskaydia-cove-nerd-font ghostty \
-  keyboardcleantool notion slack tailscale-app claude
+  keyboardcleantool notion slack tailscale-app claude copilot-cli antigravity
 
 # 4. Copy the bundled dotfiles into place. When this skill runs, Claude Code sets
 #    $CLAUDE_PLUGIN_ROOT to the plugin's install dir. (Running by hand? Point DOTS at this
