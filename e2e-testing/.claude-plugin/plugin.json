@@ -1,0 +1,20 @@
+{
+  "name": "e2e-testing",
+  "displayName": "E2E Testing",
+  "version": "1.0.0",
+  "description": "Walk realistic user journeys in Chrome and validate responsive behavior with reproducible evidence.",
+  "author": {
+    "name": "Colby Swandale",
+    "email": "colby@rubygems.org"
+  },
+  "repository": "https://github.com/colby-swandale/skills",
+  "license": "MIT",
+  "keywords": [
+    "e2e",
+    "chrome",
+    "responsive",
+    "ui",
+    "ux",
+    "testing"
+  ]
+}
