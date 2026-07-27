@@ -17,7 +17,7 @@ Each subdirectory is a self-contained plugin; the catalog lives in
 | Plugin | Description |
 |--------|-------------|
 | [`setup-environment`](setup-environment/) | Repeatable macOS (Apple Silicon) dev environment — Homebrew packages + `~/.config` dotfiles, applied without symlinks or external tooling. |
-| [`e2e-testing`](e2e-testing/) | Walk realistic user journeys in Chrome and validate responsive behavior with reproducible evidence. |
+| [`e2e-testing`](e2e-testing/) | Walk realistic user journeys in Chrome across risk-based device profiles. |
 
 ## Adding a plugin
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "E2E Testing"
-  short_description: "Test user journeys in Chrome across viewports"
+  short_description: "Test Chrome journeys across realistic devices"
   default_prompt: "Use $e2e-testing to validate these user journeys in Chrome."

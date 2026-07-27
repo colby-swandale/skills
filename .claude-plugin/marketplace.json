@@ -16,8 +16,8 @@
     {
       "name": "e2e-testing",
       "source": "./e2e-testing",
-      "description": "Walk realistic user journeys in Chrome and validate responsive behavior with reproducible evidence.",
-      "version": "1.0.0",
+      "description": "Walk realistic user journeys in Chrome across risk-based device profiles.",
+      "version": "1.0.1",
       "author": { "name": "Colby Swandale" },
       "keywords": ["e2e", "chrome", "responsive", "ui", "ux", "testing"]
     }
