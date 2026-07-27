@@ -28,6 +28,14 @@
       "version": "1.0.0",
       "author": { "name": "Colby Swandale" },
       "keywords": ["macos", "dotfiles", "setup"]
+    },
+    {
+      "name": "e2e-testing",
+      "source": "./e2e-testing",
+      "description": "Walk realistic user journeys in Chrome and validate responsive behavior with reproducible evidence.",
+      "version": "1.0.0",
+      "author": { "name": "Colby Swandale" },
+      "keywords": ["e2e", "chrome", "responsive", "ui", "ux", "testing"]
     }
   ]
 }
