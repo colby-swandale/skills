@@ -11,7 +11,9 @@ A **journey** is the unit of proof: one persona, starting state, sequence of vis
 
 - Follow the repository's setup instructions and use a local, staging, or explicitly approved test environment. Never run destructive journeys against production.
 - Isolate state. If the application uses a database, create a uniquely named disposable database; otherwise isolate the relevant files, services, and test data.
-- Drive installed Google Chrome through the available browser tooling. If Chrome is unavailable, use Playwright Chromium when possible and mark the result `Partial`.
+- Invoke `computer-use:computer-use` and use it as the primary UI driver for every real journey in installed Google Chrome. Follow that skill as the single source of truth for bootstrap, APIs, app targeting, and confirmations.
+- Use Computer Use for visible navigation, clicking, typing, keyboard traversal, browser history, and native dialogs.
+- If Computer Use or Chrome is unavailable or blocked, mark each affected journey/device cell `Blocked` and report the run as not `Pass`. Do not silently substitute another browser driver.
 - Call Chrome device profiles *emulation*. Claim physical-device coverage only after using physical devices.
 - Use synthetic accounts and data. Keep credentials, personal data, and private content out of evidence.
 
@@ -42,22 +44,25 @@ Use the current Chrome preset closest to iPhone or iPad; use realistic browser w
 
 Build required assets, start the application on a non-conflicting port, and create the synthetic accounts and records each journey needs. Avoid setup tasks with unrelated external side effects.
 
-Open the application in Chrome and reach every journey's starting state.
+Through Computer Use, open the application in Chrome and reach every journey's starting state.
 
-**Complete when:** Chrome serves the application from isolated state and every journey is ready to run.
+**Complete when:** Computer Use can read current Chrome state, Chrome serves the application from isolated state, and every journey is ready to run.
 
 ### 3. Walk the journeys
 
-Act like a user: enter through visible navigation where practical, click rendered controls, type into fields, and use browser history. Do not replace the walkthrough with direct requests, DOM mutation, or JavaScript-triggered clicks; use DOM, console, and network inspection only to explain observed behavior.
+Act like a user through Computer Use. Do not replace the walkthrough with direct requests, DOM mutation, JavaScript-triggered clicks, or screenshots; screenshots are evidence, not the test.
 
 For each planned journey and device:
 
-1. Capture the initial rendered state.
-2. Perform the visible actions.
-3. Verify feedback, URL/history behavior, persisted state, and the final outcome.
-4. Exercise any planned failure or edge state.
-5. Check console exceptions and failed or unexpected network requests.
-6. Capture evidence for the result and any defect.
+1. Read the initial rendered Chrome state.
+2. Perform the visible actions, including any native dialog response.
+3. After each action, or batch that needs no intermediate decision, re-read state and derive fresh accessibility element indexes before acting again.
+4. Verify feedback, URL/history behavior, persisted state, and the final outcome.
+5. Exercise any planned failure or edge state.
+6. Check console exceptions and failed or unexpected network requests.
+7. Capture evidence for the result and any defect.
+
+When exact responsive emulation or console/network evidence is unavailable through Computer Use, use Playwright or system tests to gather that evidence only. Record it separately; complementary tooling does not replace the visible Chrome journey or turn a `Blocked` cell into `Pass`.
 
 Inspect four surfaces:
 
@@ -66,9 +71,7 @@ Inspect four surfaces:
 - **Interaction:** menus, dialogs, toasts, loading, disabled, empty, and error states.
 - **Input:** touch targets, hover-only behavior, keyboard reachability, visible focus, labels, and dialog close behavior.
 
-Use screenshots as evidence, not as the test itself.
-
-**Complete when:** every planned journey/device cell is `Pass`, `Fail`, or `Blocked`, with browser evidence and console/network checks recorded.
+**Complete when:** every planned journey/device cell is `Pass`, `Fail`, or `Blocked`, with current-state browser evidence and relevant console/network checks recorded.
 
 ### 4. Confirm failures
 
@@ -90,6 +93,6 @@ Return:
 4. **Defects:** confirmed issues ordered by user impact.
 5. **Limitations:** blocked journeys, unavailable roles, data or devices, browser fallbacks, and untested behavior.
 
-Use `Pass` only when every planned cell passed in Chrome and no confirmed in-scope defect remains. Use `Fail` when a confirmed defect degrades an in-scope journey. Use `Partial` whenever planned coverage could not be completed or Chrome was replaced by a fallback.
+Use `Pass` only when every planned cell passed in Chrome through Computer Use and no confirmed in-scope defect remains. Use `Fail` when a confirmed defect degrades an in-scope journey. Use `Partial` whenever planned coverage could not be completed, including when Computer Use or Chrome was unavailable or blocked. Identify all complementary tools and their evidence.
 
 **Complete when:** another person can see exactly what was tested, reproduce every defect, and understand what remains unknown.
