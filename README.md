@@ -16,8 +16,6 @@ Each subdirectory is a self-contained plugin; the catalog lives in
 
 | Plugin | Description |
 |--------|-------------|
-| [`writing-ticks`](writing-ticks/) | Audit and edit drafts for AI-writing tells, generic phrasing, and over-smoothed prose. |
-| [`organising-slack`](organising-slack/) | Review active Slack channels, interview the user, and propose a cleaner sidebar organisation. |
 | [`setup-environment`](setup-environment/) | Repeatable macOS (Apple Silicon) dev environment — Homebrew packages + `~/.config` dotfiles, applied without symlinks or external tooling. |
 | [`e2e-testing`](e2e-testing/) | Walk realistic user journeys in Chrome and validate responsive behavior with reproducible evidence. |
 

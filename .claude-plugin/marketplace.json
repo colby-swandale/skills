@@ -6,22 +6,6 @@
   },
   "plugins": [
     {
-      "name": "writing-ticks",
-      "source": "./writing-ticks",
-      "description": "Audit and edit drafts for AI-writing tells, generic phrasing, and over-smoothed prose.",
-      "version": "1.0.0",
-      "author": { "name": "Colby Swandale" },
-      "keywords": ["writing", "editing", "ai-writing", "style"]
-    },
-    {
-      "name": "organising-slack",
-      "source": "./organising-slack",
-      "description": "Review active Slack channels and propose a cleaner Slack sidebar organisation.",
-      "version": "1.0.0",
-      "author": { "name": "Colby Swandale" },
-      "keywords": ["slack", "organisation", "channels", "productivity"]
-    },
-    {
       "name": "setup-environment",
       "source": "./setup-environment",
       "description": "Repeatable macOS dev environment setup (Homebrew packages + ~/.config dotfiles).",
