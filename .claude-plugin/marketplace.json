@@ -14,6 +14,22 @@
       "keywords": ["macos", "dotfiles", "setup"]
     },
     {
+      "name": "apple-containers",
+      "source": "./apple-containers",
+      "description": "Translate docker/compose instructions into Apple's `container` CLI — the only container runtime on this machine.",
+      "version": "1.0.0",
+      "author": { "name": "Colby Swandale" },
+      "keywords": ["containers", "docker", "compose", "macos", "apple"]
+    },
+    {
+      "name": "setup-rails",
+      "source": "./setup-rails",
+      "description": "Take a Rails app to a green boot: create or clone, install, prepare the database, verify server and tests.",
+      "version": "1.0.0",
+      "author": { "name": "Colby Swandale" },
+      "keywords": ["rails", "ruby", "setup", "postgres", "development"]
+    },
+    {
       "name": "e2e-testing",
       "source": "./e2e-testing",
       "description": "Walk realistic user journeys in Chrome across risk-based device profiles.",

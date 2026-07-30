@@ -1,0 +1,19 @@
+{
+  "name": "setup-rails",
+  "displayName": "Setup Rails",
+  "version": "1.0.0",
+  "description": "Take a Rails app to a green boot: create or clone, install, prepare the database, verify server and tests.",
+  "author": {
+    "name": "Colby Swandale",
+    "email": "colby@rubygems.org"
+  },
+  "repository": "https://github.com/colby-swandale/skills",
+  "license": "MIT",
+  "keywords": [
+    "rails",
+    "ruby",
+    "setup",
+    "postgres",
+    "development"
+  ]
+}

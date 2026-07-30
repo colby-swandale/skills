@@ -1,0 +1,19 @@
+{
+  "name": "apple-containers",
+  "displayName": "Apple Containers",
+  "version": "1.0.0",
+  "description": "Translate docker/compose instructions into Apple's `container` CLI — the only container runtime on this machine.",
+  "author": {
+    "name": "Colby Swandale",
+    "email": "colby@rubygems.org"
+  },
+  "repository": "https://github.com/colby-swandale/skills",
+  "license": "MIT",
+  "keywords": [
+    "containers",
+    "docker",
+    "compose",
+    "macos",
+    "apple"
+  ]
+}
